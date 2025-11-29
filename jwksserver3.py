@@ -329,10 +329,12 @@ if __name__ == "__main__":
 	conn.commit()
 
 	# save pem to database rather than making it a global variable
-	expiration_time = datetime.datetime.utcnow() + datetime.timedelta(hours=1)	
-	create_key(expiration_time)
-	expiration_time2 = datetime.datetime.utcnow() - datetime.timedelta(hours=1)	
-	create_key(expiration_time2)
+	# unexpired key
+	unexpired_time = int((datetime.datetime.now() + datetime.timedelta(hours=1)).timestamp())
+	create_key(unexpired_time)
+	# expired key
+	expired_time = int((datetime.datetime.now() - datetime.timedelta(hours=1)).timestamp())
+	create_key(expired_time)
 
 	try:
 		webServer.serve_forever()
