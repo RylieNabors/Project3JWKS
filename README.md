@@ -16,6 +16,9 @@ According to the test performed below, the server embodies all intended function
 ![Rubric of tests passed](GradebotProject3_Finalized.png)
 
 ## Previously implemented Features:
+[JWKS Server Version 1](https://github.com/RylieNabors/Project1JWKS)  
+[JWKS Server Version 2](https://github.com/RylieNabors/Project2JWKS)  
+
 The features implemented in this project include:  
 * Functional HTTP server that runs on port 8080
 * RSA key pair generation for both valid and unexpired keys
